@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Online Sales Dataset - Popular Marketplace Data | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Global Transactions Across Various Product Categories" />
+    <meta name="keywords" content="news,data analytics,data visualization,exploratory data analysis,categorical,e-commerce services" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" type="text/javascript">
+    window["pageRequestStartTime"] = 1722388282714;
+    window["pageRequestEndTime"] = 1722388282795;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==">window.KAGGLE_JUPYTERLAB_PATH = "/static/jl2-static/jupyterlab-index-de53cf5bbd46ca5e45d1.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=dne" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=01523e0395c8cd92c442" />
+
+  
+    
+ 
+      <script nonce="VG4Y9VZplTb9yUdCwXp4yA==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="VG4Y9VZplTb9yUdCwXp4yA==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data" />
+    <meta property="og:title" content="Online Sales Dataset - Popular Marketplace Data" />
+    <meta property="og:description" content="Global Transactions Across Various Product Categories" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/5085377/8517615/195bc167ea07105a0bd0ebb36a1cd47e/dataset-card.jpg?t=2024-05-26-00-10-51" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+            <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Online Sales Dataset - Popular Marketplace Data","description":"This dataset provides a comprehensive overview of online sales transactions across different product categories. Each row represents a single transaction with detailed information such as the order ID, date, category, product name, quantity sold, unit price, total price, region, and payment method.\n\n##  **Columns:**\n\n- **Order ID:** Unique identifier for each sales order.\n- **Date:**Date of the sales transaction.\n- **Category:**Broad category of the product sold (e.g., Electronics, Home Appliances, Clothing, Books, Beauty Products, Sports).\n- **Product Name:**Specific name or model of the product sold.\n- **Quantity:**Number of units of the product sold in the transaction.\n- **Unit Price:**Price of one unit of the product.\n- **Total Price:** Total revenue generated from the sales transaction (Quantity * Unit Price).\n- **Region:**Geographic region where the transaction occurred (e.g., North America, Europe, Asia).\n- **Payment Method:** Method used for payment (e.g., Credit Card, PayPal, Debit Card).\n\n##  **Insights:**\n\n- *1. Analyze sales trends over time to identify seasonal patterns or growth opportunities.*\n- *2. Explore the popularity of different product categories across regions.*\n- *3. Investigate the impact of payment methods on sales volume or revenue.*\n- *4. Identify top-selling products within each category to optimize inventory and marketing strategies.*\n- *5. Evaluate the performance of specific products or categories in different regions to tailor marketing campaigns accordingly.*","url":"https://www.kaggle.com/shreyanshverma27/online-sales-dataset-popular-marketplace-data","version":1,"keywords":["subject, people and society, news","technique, data analytics","technique, data visualization","technique, exploratory data analysis","data type, categorical","subject, people and society, business, e-commerce services"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["5085377"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"ShreyanshVerma27","url":"https://www.kaggle.com/shreyanshverma27","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/7719373-kg.JPEG?t=2024-01-09-20-35-22"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/shreyanshverma27/online-sales-dataset-popular-marketplace-data/download?datasetVersionNumber=1","contentSize":"6938 bytes"}],"commentCount":4,"dateModified":"2024-05-25T23:55:26.46Z","discussionUrl":"https://www.kaggle.com/shreyanshverma27/online-sales-dataset-popular-marketplace-data/discussion","alternateName":"Global Transactions Across Various Product Categories","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/5085377/8517615/195bc167ea07105a0bd0ebb36a1cd47e/dataset-card.jpg?t=2024-05-26-00-10-51","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":4},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":17235},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":61451},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":277}]}</script>
+        
+
+  
+    
+
+  
+    
+
+
+    <script nonce="VG4Y9VZplTb9yUdCwXp4yA==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="VG4Y9VZplTb9yUdCwXp4yA==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" src="/static/assets/runtime.js?v=c232cc8dd1c1e18fc8ed"></script>
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" src="/static/assets/vendor.js?v=c5f94d4977c83a7669a9"></script>
+  <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" src="/static/assets/app.js?v=c38cbf61923597a177b5"></script>
+    <script nonce="VG4Y9VZplTb9yUdCwXp4yA==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+<body>
+<main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+
+<script nonce="VG4Y9VZplTb9yUdCwXp4yA==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="VG4Y9VZplTb9yUdCwXp4yA==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
